@@ -14,18 +14,7 @@ function createMarkup(galleryItems){
   </a>
   </li>`).join("")
 }
-// const markup = galleryItems.map(image => {
-//     return `<li class = "gallery__item" ><a class="gallery__link" href="${image.original}"><img src="${image.preview}"  class="gallery__image" alt ="${image.description}" /></a></li>`
-// }).join('');
+
  container.insertAdjacentHTML('beforeend', createMarkup(galleryItems));
-// container.insertAdjacentHTML('beforeend', markup)
-container.addEventListener("click ", handlerImageClick);
-// let lightbox= new SimpleLightbox('.gallery li a', { captionType: 'attr', captionsData: 'alt', captionDelay: 250 });
-function handlerImageClick(event) {
-    event.preventDefault()
-    if (!event.currenTarget.classList.contains("gallery__image")) {
-         return
-    }
-    
- }
- let lightbox= new SimpleLightbox('.gallery li a', { captionType: 'attr', captionsData: 'alt', captionDelay: 250 });
+
+ const lightbox= new SimpleLightbox('.gallery li a', { captionType: 'attr', captionsData: 'alt', captionDelay: 250 });
